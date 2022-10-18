@@ -1,0 +1,25 @@
+
+%Author Berkeley, Edmund Callis
+%Author Wainwright, Lawrence
+%Title Computers Their Operation and Applications
+%Editor Chapman & Hall, Ltd
+%Date Sep 1956
+%z c:dc Dc:1
+%U download, inventaire95
+%Reference 010-56-101
+%X aaa
+bbb
+
+ccc
+
+
+%Author Iliffe, J. K.
+%Title Basic Machine Principles
+%Series Computer Monographs
+%Editor Macdonald
+%Copies 49-50 Poland Street, London W.1.
+%Date April 1968
+%i 356-02327-3
+%z c:dc Dc:76
+%U download, inventaire95
+%Reference 010-68-101

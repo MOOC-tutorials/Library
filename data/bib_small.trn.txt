@@ -1,0 +1,92 @@
+%Reference 010-54-01
+%Author Bauer, F. L.
+%Author Goos, G.
+%Title Informatik, Eine einfuhrende ubersicht: Erster Teil
+%Pages 213
+%Date 1971
+%Editor Springer-Verlag Berlin
+%Series Heidelberger Tashenbucher
+%Copies 1
+
+%Reference 010-93-04
+%Author White, Ron
+%Title How computers work
+%Editor Ziff-Davis Press
+%Date 1993
+%Pages 202
+%Series PC Computing
+%Copies 1
+
+%Reference 020-80-08
+%Author Grogono, P.
+%Title Programming In Pascal- Revised Edition
+%Pages 363
+%Date 1980
+%Editor Addison Wesley
+%Copies 2
+
+%Reference 040-75-103
+%Author Sussman, Gerald Jay
+%Title A Computer Model of Skill Acquisition
+%Series Elsevier Computer Science Library
+%Editor Elsevier
+%Date 1975
+%Copies 1
+
+%Reference 050-89-04
+%Author Graham, R. L.
+%Author Knuth, D. E.
+%Author Patashnik, O.
+%Title Concrete Mathematics - A Foundation For Computer Science
+%Pages 625
+%Date 1989
+%Editor Addison-Wesley
+%Copies 1
+
+%Reference 050-95-07
+%Author Motwani, Rajeev
+%Author Raghavan, Prabhakar
+%Title Randomized algorithms
+%Editor Cambridge university press
+%Date 1995
+%Pages 476
+%Copies 1
+
+%Reference 090-85-03
+%Author Abelson, H.
+%Author Sussman, G. J.
+%Author Sussman, J.
+%Title Structure And Interpretation Of Computer Programs
+%Pages 542
+%Date 1985
+%Editor The Mit Press, McGraw-Hill
+%Series The Mit Electrical Engineering and Computer Science Series
+%Copies 3
+
+%Reference 090-85-101
+%Author Abelson, Harold
+%Author Sussman, Gerald Jay
+%Title Structure and Interpretation of Computer Programs
+%Series The Mit Press Electrical Engineering and Computer Science Series
+%Editor mit-Press
+%Date 1985
+%Copies 1
+
+%Reference 090-86-01
+%Author Agha, G.
+%Title A C T O R S: A Model Of Concurrent Computation In Distributed Systems
+%Pages 144
+%Date 1987
+%Editor Mit Press
+%Series The Mit Press Series In Artificial Intelligence
+%Copies 2
+
+%Reference 090-95-06
+%Author Horowitz, Ellis
+%Author Sahni, Sartaj
+%Author Mehta, Dinesh
+%Title Fundamentals of data structures in C++
+%Editor Computer Science Press
+%Date 1995
+%Pages 653
+%Copies 6
