@@ -1,5 +1,4 @@
-# Tutorial: Acoplamiento y Cohesión
-# Plan de Estudios
+# Library
 
 
 Proyecto tutorial para analizar la calidad de código con respecto a su:
