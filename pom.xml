@@ -3,6 +3,17 @@
   <groupId>Library</groupId>
   <artifactId>Library</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+<dependencies>
+  <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+  </dependency>
+</dependencies>
+<properties>
+  <sonar.organization>mooc-tutorials</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
