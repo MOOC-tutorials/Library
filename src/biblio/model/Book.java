@@ -271,13 +271,6 @@ public class Book {
 	}
 	
 	/*
-	 * answer true or false according to if the client has borrowed the book or not
-	 */
-	public boolean borrowedBy(Client client) {
-		return getBorrowedCopy(client) != null;
-	}
-	
-	/*
 	 * answer true or false according to if the client has reserved the book or not
 	 */
 	public boolean reservedBy(Client client) {
@@ -330,18 +323,6 @@ public class Book {
 		return Collections.unmodifiableCollection(copies);
 	}
 
-
-	/**
- 	 * @return une collection sur l'ensemble de tous les exemplaires non empruntes a ce moment.
-	 */
-	public Collection<BookCopy> availableCopies() {
-		Collection<BookCopy> result = new ArrayList<BookCopy>();	
-		for(BookCopy bookCopy : copies)
-			if(bookCopy.isAvailable())
-				result.add(bookCopy);
-		return result;
-	}
-
 	/**
 	 * Renvoie un exemplaire pour que le client donnee l'emprunte, tenant
 	 * compte des reservations placees sur cet ouvrage.
@@ -360,9 +341,12 @@ public class Book {
 	 * s'il n'y a aucun exemplaire disponible pour ce client a ce moment.
 	 */
 	public BookCopy copyFor(Client client) {
-		if(borrowedBy(client))
+		if(getBorrowedCopy(client) != null)
 			return null;
-		Collection<BookCopy> availables = availableCopies();
+		Collection<BookCopy> availables = new ArrayList<BookCopy>();
+		for(BookCopy bookCopy : copies)
+			if(bookCopy.isAvailable())
+				availables.add(bookCopy);
 		if(availables.size() == 0)
 			return null;
 		else {
@@ -412,7 +396,14 @@ public class Book {
 	 * @return le nombre d'exemplaires disponibles
 	 */
 	public int numAvailableCopies() {
-		return availableCopies().size();
+		Collection<BookCopy> availables = new ArrayList<BookCopy>();
+		int count = 0;
+		for(BookCopy bookCopy : copies)
+			if(bookCopy.isAvailable()) {
+				availables.add(bookCopy);
+				count += 1;
+			}
+		return count;
 	}
 	
 	/**
@@ -441,7 +432,7 @@ public class Book {
 	 *          le numero de copies disponible si pos vaut 8
 	 *          le numero de copies reservu si pos vaut 9
 	 */
-	public Object getFieldValue(int fieldCode) {
+	/*public Object getFieldValue(int fieldCode) {
 		switch (fieldCode) {
 		case BookField.AUTHORS: return getAuthorsString();
 		case BookField.TITLE: return getTitle();
@@ -455,7 +446,7 @@ public class Book {
 		case BookField.NUM_RESERVED_COPIES: return numReservedCopies();
 		default: throw new RuntimeException("Book code no recognized");
 		}
-	}
+	}*/
 	
 	/** 
 	 * Renvoie une chaine de caracteres caracterisant une instance de la classe Book.

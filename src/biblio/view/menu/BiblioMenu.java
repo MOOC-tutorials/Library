@@ -24,6 +24,4 @@ public abstract class BiblioMenu extends JMenu {
 	public void setController(Controller controller) {
 		this.controller = controller;
 	}
-	
-	
 }

@@ -101,7 +101,11 @@ public class ClientRepository {
 		if(book.numAvailableCopies() == 0) {
 			theyCanBorrow = new ArrayList<Client>();
 		} else if(book.numReservedCopies() >= book.numAvailableCopies()) {
-			theyCanBorrow = book.getReservations().subList(0, book.numAvailableCopies());
+			theyCanBorrow = new ArrayList<Client>();
+			for(int i=0; i<= book.numAvailableCopies(); i++) {
+				List<Client> reservations = book.getReservations();
+				theyCanBorrow.add(reservations.get(i));
+			}
 		}
 		else {
 			theyCanBorrow = new ArrayList<Client>(clientList);

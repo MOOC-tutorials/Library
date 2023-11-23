@@ -92,12 +92,18 @@ public class ClientEditionPanel extends BiblioEditionPanel {
 		if(clientIdTextField.getText().length() == 0) {
 			SwingUtility.showErrorMessage("Invalid id");
 			return false;
-		}
+		} 
 		else {
-			client.setId(clientIdTextField.getText());
-			if(otherClients.contains(client)) {
-				SwingUtility.showErrorMessage("The client with id "+client.getId()+" already exist, try with another one");
+			if(checkNumber(clientIdTextField.getText())) {
+				SwingUtility.showErrorMessage("Client ids must be numbers only");
 				return false;
+			} else {
+				if(otherClients.contains(client)) {
+					SwingUtility.showErrorMessage("The client with id "+client.getId()+" already exist, try with another one");
+					return false;
+				} else {
+					client.setId(clientIdTextField.getText());
+				}
 			}
 		}
 		
@@ -115,8 +121,11 @@ public class ClientEditionPanel extends BiblioEditionPanel {
 		else {
 			try {
 				double fine = Double.parseDouble(clientFineTextField.getText());
-				if(fine>=0)
+				if(fine>=0) {
 					client.setFine(fine);
+					if(fine >0)
+						SwingUtility.showMessage("Client with a fine!");
+				}
 				else {
 					SwingUtility.showErrorMessage("The fine must be 0 or a positive number");
 					return false;
@@ -130,6 +139,13 @@ public class ClientEditionPanel extends BiblioEditionPanel {
 	}
 
 
-
+	private boolean checkNumber(String value) {
+		try {
+			int id = Integer.parseInt(clientIdTextField.getText());
+			return true;
+		} catch(NumberFormatException e) {
+			return false;
+		}
+	}
 
 }

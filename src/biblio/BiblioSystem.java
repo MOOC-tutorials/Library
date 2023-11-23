@@ -37,7 +37,12 @@ public class BiblioSystem {
 		// Create an administrator user interface for the library with a controller to handle its actions
 		GUI userInterface = new AdministratorGUI(new Controller());
 		// Launch the user interface
-		userInterface.launch();
+		if(userInterface instanceof GUI) {
+			if(!userInterface.getMainFrame().isVisible()) {
+					userInterface.launch();
+			}
+		}
+		
 	}
 	
 	/**

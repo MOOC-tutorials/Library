@@ -211,7 +211,7 @@ public class BookRepository {
 	public Collection<Book> hasBorrowedWhat(Client client) {
 		Collection<Book> borrowedBooks = new ArrayList<Book>();
 		for(Book book: booksList) {
-			if(book.borrowedBy(client))
+			if(book.getBorrowedCopy(client) != null)
 				borrowedBooks.add(book);
 		}
 		return borrowedBooks;
